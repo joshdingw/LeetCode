@@ -25,7 +25,6 @@ class Solution {
             if(fast.val == val){
                 fast = fast.next;
                 slow.next = fast;
-                System.out.println("!!");
             }else{
                 slow = fast;
                 fast = fast.next;
