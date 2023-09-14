@@ -1,8 +1,5 @@
 class Solution {
     public String reverseWords(String s) {
-        // while(s.charAt(0) == ' '){
-        //     s = s.substring(1);
-        // }
         s = s.strip();
         String[] records = s.split(" ", 0);
 
