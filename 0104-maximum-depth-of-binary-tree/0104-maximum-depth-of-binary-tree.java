@@ -18,27 +18,18 @@ class Solution {
         if(root == null){
             return 0;
         }
-        LinkedList<TreeNode> records = new LinkedList<>();
-        records.add(root);
-        int size = 1;
-        int depth = 0;
-        while(!records.isEmpty()){
-            depth++;
-            while(size > 0){
-                TreeNode temp = records.poll();
-                TreeNode left = temp.left;
-                TreeNode right = temp.right;
-                if(left != null){
-                    records.add(left);
-                }
-                if(right != null){
-                    records.add(right);
-                }
-                size--;
-            }
-            size = records.size();
-            
-        }
-        return depth;
+        int depth = 1;
+        
+        
+        return Math.max(helper(root.left, depth), helper(root.right, depth));
     }
+    public int helper(TreeNode cur, int depth){
+        if(cur == null){
+            return depth;
+        }
+        depth++;
+        return Math.max(helper(cur.left, depth), helper(cur.right, depth));
+        
+    }
+    
 }
