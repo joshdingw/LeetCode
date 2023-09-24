@@ -18,18 +18,13 @@ class Solution {
         if(root == null){
             return root;
         }
-        inverse(root);
+        invertTree(root.left);
+        invertTree(root.right);
+        TreeNode temp = root.left;
+        root.left = root.right;
+        root.right = temp;
+
         return root;
     }
-    public void inverse(TreeNode cur){
-        if(cur == null){
-            return;
-        }
-        inverse(cur.left);
-        inverse(cur.right);
-        TreeNode temp = cur.left;
-        cur.left = cur.right;
-        cur.right = temp;
 
-    }
 }
