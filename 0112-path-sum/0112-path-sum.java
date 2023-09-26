@@ -26,7 +26,6 @@ class Solution {
         TreeNode right = cur.right;
 
         if(left == null && right == null){
-            System.out.println(sum );
             if((sum - cur.val) == 0){
                 return true;
             }
