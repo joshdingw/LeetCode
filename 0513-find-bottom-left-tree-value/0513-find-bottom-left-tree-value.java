@@ -35,14 +35,10 @@ class Solution {
             }
         }
         if(left != null){
-            depth++;
-            traversal(left, depth);
-            depth--;
+            traversal(left, depth + 1);
         }
          if(right != null){
-            depth++;
-            traversal(right, depth);
-            depth--;
+            traversal(right, depth + 1);
         }
 
 
