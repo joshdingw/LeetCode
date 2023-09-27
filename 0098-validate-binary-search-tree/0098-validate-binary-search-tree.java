@@ -16,24 +16,6 @@
 class Solution {
     LinkedList<Integer> inorder = new LinkedList<>();
     public boolean isValidBST(TreeNode root) {
-        // if(root == null){
-        //     return true;
-        // }
-        // TreeNode left = root.left;
-        // TreeNode right = root.right;
-        // if(left == null && right == null){
-        //     return true;
-        // }
-        // if(left != null && right == null){
-        //     if(left.val >= root.val) return false;
-        //     return isValidBST(root.left);
-        // }
-        // if(right != null && left == null){
-        //     if(right.val <= root.val) return false;
-        //     return isValidBST(root.right);
-        // }
-        // if(left.val >= root.val || right.val <= root.val) return false;
-        // return  isValidBST(root.left) && isValidBST(root.right);
 
         traversal(root);
         for(int i = 0; i < inorder.size() - 1; i++){
